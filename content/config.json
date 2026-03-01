@@ -10,5 +10,15 @@
     "nell": [],
     "sean": [],
     "mikel": []
+  },
+  "map": {
+    "enabled": true,
+    "visibleLocations": [
+      "miskatonic-university",
+      "bm-train-station",
+      "arkham-gazette",
+      "the-docks",
+      "orne-library"
+    ]
   }
 }
