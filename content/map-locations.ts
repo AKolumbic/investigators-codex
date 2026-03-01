@@ -81,8 +81,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "northside",
     description:
       "Where the Boston & Maine line ends and Arkham begins. Porters know everyone who arrives and most of what they carry.",
-    x: 38.75,
-    y: 33.35,
+    x: 40,
+    y: 33.1,
     tier: "major",
   },
   {
