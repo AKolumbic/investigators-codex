@@ -4,5 +4,11 @@
     "nell": true,
     "sean": true,
     "mikel": true
+  },
+  "clues": {
+    "bill": [],
+    "nell": [],
+    "sean": [],
+    "mikel": []
   }
 }
