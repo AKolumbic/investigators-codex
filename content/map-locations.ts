@@ -29,7 +29,7 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "campus",
     description:
       "The ivy-choked heart of Arkham's intellectual life. Half the faculty drink too much and the other half have seen too much.",
-    x: 33,
+    x: 37,
     y: 52,
     tier: "major",
   },
@@ -40,7 +40,7 @@ export const mapLocations: MapLocation[] = [
     description:
       "Three floors of dusty scholarship and a restricted collection that nobody talks about at faculty dinners.",
     x: 35,
-    y: 53,
+    y: 48,
     tier: "major",
   },
   {
@@ -59,7 +59,7 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "campus",
     description:
       "A respectable address for visiting scholars. The night clerk has learned not to ask questions.",
-    x: 50,
+    x: 46,
     y: 54,
     tier: "minor",
   },
