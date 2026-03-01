@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-noir-bg: #1a1a1a;
+  --color-noir-surface: #222222;
+  --color-noir-surface-alt: #2a2a2a;
+  --color-gold: #d4a830;
+  --color-gold-dark: #8b6914;
+  --color-gold-dim: #c4983a;
+  --color-cream: #e8e0d4;
+  --color-muted: #999999;
+  --color-ink: #1e1e30;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-paper-bill: #f0deb0;
+  --color-paper-sean: #f2e1b5;
+  --color-paper-nell: #ede4cc;
+  --color-paper-mikel: #eee5ce;
+
+  --font-cinzel: var(--font-cinzel);
+  --font-crimson: var(--font-crimson);
+  --font-oswald: var(--font-oswald);
+  --font-caveat: var(--font-caveat);
+  --font-patrick-hand: var(--font-patrick-hand);
+  --font-permanent-marker: var(--font-permanent-marker);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-noir-bg);
+  color: var(--color-cream);
+  font-family: var(--font-crimson), Georgia, serif;
+  min-height: 100dvh;
+}
+
+/* Aged paper shared base */
+.paper-base {
+  position: relative;
+  border-radius: 2px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(120, 90, 50, 0.15),
+    inset 0 0 50px rgba(139, 109, 63, 0.08);
+}
+
+/* Fold lines — letter folded in thirds */
+.fold-thirds::before,
+.fold-thirds::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 3%,
+    rgba(120, 90, 50, 0.15) 15%,
+    rgba(120, 90, 50, 0.22) 50%,
+    rgba(120, 90, 50, 0.15) 85%,
+    transparent 97%
+  );
+}
+.fold-thirds::before {
+  top: 33.3%;
+}
+.fold-thirds::after {
+  top: 66.6%;
+}
+
+/* Single fold — folded in half, shoved in pocket */
+.fold-half::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 5%,
+    rgba(120, 90, 50, 0.18) 20%,
+    rgba(120, 90, 50, 0.22) 50%,
+    rgba(120, 90, 50, 0.18) 80%,
+    transparent 95%
+  );
+}
+
+/* Torn top edge */
+.torn-top::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--torn-color, #ede4cc) 0%,
+    transparent 2%,
+    var(--torn-color, #ede4cc) 4%,
+    transparent 8%,
+    var(--torn-color, #ede4cc) 10%,
+    transparent 11%,
+    var(--torn-color, #ede4cc) 14%,
+    transparent 18%,
+    var(--torn-color, #ede4cc) 20%,
+    transparent 21%,
+    var(--torn-color, #ede4cc) 25%,
+    transparent 30%,
+    var(--torn-color, #ede4cc) 32%,
+    transparent 33%,
+    var(--torn-color, #ede4cc) 38%,
+    transparent 42%,
+    var(--torn-color, #ede4cc) 44%,
+    transparent 46%,
+    var(--torn-color, #ede4cc) 50%,
+    transparent 55%,
+    var(--torn-color, #ede4cc) 57%,
+    transparent 58%,
+    var(--torn-color, #ede4cc) 62%,
+    transparent 67%,
+    var(--torn-color, #ede4cc) 69%,
+    transparent 70%,
+    var(--torn-color, #ede4cc) 75%,
+    transparent 80%,
+    var(--torn-color, #ede4cc) 82%,
+    transparent 84%,
+    var(--torn-color, #ede4cc) 88%,
+    transparent 92%,
+    var(--torn-color, #ede4cc) 94%,
+    transparent 96%,
+    var(--torn-color, #ede4cc) 98%,
+    transparent 100%
+  );
 }
