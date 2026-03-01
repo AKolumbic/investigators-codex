@@ -39,8 +39,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "campus",
     description:
       "Three floors of dusty scholarship and a restricted collection that nobody talks about at faculty dinners.",
-    x: 35,
-    y: 48,
+    x: 35.5,
+    y: 48.5,
     tier: "major",
   },
   {
@@ -59,8 +59,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "campus",
     description:
       "A respectable address for visiting scholars. The night clerk has learned not to ask questions.",
-    x: 46,
-    y: 54,
+    x: 45.5,
+    y: 54.5,
     tier: "minor",
   },
   {
