@@ -91,8 +91,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "northside",
     description:
       "A cramped newsroom that smells of ink and cigarettes. If it happened in Arkham, somebody here wrote it down.",
-    x: 34,
-    y: 22,
+    x: 32,
+    y: 17,
     tier: "minor",
   },
   {
