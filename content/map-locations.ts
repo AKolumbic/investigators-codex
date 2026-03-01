@@ -59,7 +59,7 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "campus",
     description:
       "A respectable address for visiting scholars. The night clerk has learned not to ask questions.",
-    x: 37,
+    x: 50,
     y: 54,
     tier: "minor",
   },
