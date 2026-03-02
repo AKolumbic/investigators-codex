@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { investigators, investigatorSlugs } from "@/lib/investigators";
-import { isMapEnabled } from "@/lib/config";
+import { isMapEnabled, getVisibleRecapIds } from "@/lib/config";
 import { CharacterCard } from "@/components/CharacterCard";
 
 export default function Home() {
   const mapEnabled = isMapEnabled();
+  const recapsVisible = getVisibleRecapIds().length > 0;
 
   return (
     <main className="mx-auto min-h-dvh max-w-lg px-4 py-8 sm:py-12">
@@ -51,6 +52,22 @@ export default function Home() {
           <br />
           <span className="font-[family-name:var(--font-crimson)] text-xs italic text-muted">
             Explore the city
+          </span>
+        </Link>
+      )}
+
+      {/* Case Notes link — conditional */}
+      {recapsVisible && (
+        <Link
+          href="/recap"
+          className="group mt-4 block rounded-sm border border-gold-dark/40 bg-noir-surface px-4 py-3 text-center transition-all duration-300 hover:border-gold/60 hover:shadow-[0_0_20px_rgba(212,168,48,0.15)] sm:mt-5"
+        >
+          <span className="font-[family-name:var(--font-cinzel)] text-sm tracking-wide text-gold">
+            Case Notes
+          </span>
+          <br />
+          <span className="font-[family-name:var(--font-crimson)] text-xs italic text-muted">
+            What we know so far
           </span>
         </Link>
       )}

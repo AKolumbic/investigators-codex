@@ -6,9 +6,14 @@ interface MapConfig {
   visibleLocations: string[];
 }
 
+interface RecapConfig {
+  visible: string[];
+}
+
 interface Config {
   letters: Record<InvestigatorSlug, boolean>;
   clues: Record<InvestigatorSlug, string[]>;
+  recaps: RecapConfig;
   map: MapConfig;
 }
 
@@ -28,6 +33,10 @@ export function isMapEnabled(): boolean {
 
 export function getVisibleLocationIds(): string[] {
   return config.map?.visibleLocations ?? [];
+}
+
+export function getVisibleRecapIds(): string[] {
+  return config.recaps?.visible ?? [];
 }
 
 export default config;

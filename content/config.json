@@ -6,10 +6,13 @@
     "mikel": true
   },
   "clues": {
-    "bill": [],
-    "nell": [],
-    "sean": [],
-    "mikel": []
+    "bill": ["bill-porter-sighting", "bill-ashburn-lead"],
+    "nell": ["nell-scrapbook-pattern", "nell-fiske-flask", "nell-fairchild-genuine", "nell-ashburn-amateur"],
+    "sean": ["sean-sheamus-tip", "sean-vic-hotel"],
+    "mikel": ["mikel-vik-sos"]
+  },
+  "recaps": {
+    "visible": ["session-1"]
   },
   "map": {
     "enabled": true,
