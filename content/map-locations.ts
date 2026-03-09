@@ -91,8 +91,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "northside",
     description:
       "Knock twice, ask for soda water. Everyone knows. Even the cops — especially the cops.",
-    x: 28,
-    y: 20,
+    x: 47,
+    y: 22.25,
     tier: "minor",
   },
   {
@@ -176,12 +176,22 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "downtown",
     description:
       "Rutherford Pike works late and asks few questions. The drawers are fuller than usual this spring.",
-    x: 55,
+    x: 56,
     y: 27.8,
     tier: "minor",
   },
 
   // --- French Hill ---
+  {
+    id: "ashburn-estate",
+    name: "Ashburn Estate",
+    neighborhood: "uptown",
+    description:
+      "A crumbling Georgian mansion clinging to its last pretensions. Elbridge Ashburn III hosts 'gatherings' in the east wing that the servants refuse to discuss.",
+    x: 19.2,
+    y: 69.8,
+    tier: "minor",
+  },
   {
     id: "sycamores",
     name: "Sycamores Speakeasy",
