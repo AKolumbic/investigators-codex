@@ -123,7 +123,7 @@ export const mapLocations: MapLocation[] = [
     name: "The Docks",
     neighborhood: "merchant",
     description:
-      "Fish, diesel, and the faint sweetness of rum that fell off a boat. Half the cargo here has no paperwork.",
+      "Fish, diesel, and the faint sweetness of rum that fell off a boat. Half the cargo here has no paperwork. A dockworker pulled a body from the river here — face burned beyond recognition.",
     x: 49,
     y: 41.25,
     tier: "major",
