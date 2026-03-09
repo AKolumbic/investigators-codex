@@ -35,23 +35,13 @@ export const mapLocations: MapLocation[] = [
   },
   {
     id: "orne-library",
-    name: "Orne Library",
+    name: "Warren Hall",
     neighborhood: "campus",
     description:
-      "Three floors of dusty scholarship and a restricted collection that nobody talks about at faculty dinners.",
+      "Home of the Department of Psychology. Room 214 belongs to Professor Fairchild — the light's always on late, but the professor never remembers staying.",
     x: 36.5,
     y: 49,
     tier: "major",
-  },
-  {
-    id: "fairchild-office",
-    name: "Fairchild's Office (Derby Hall)",
-    neighborhood: "campus",
-    description:
-      "Second floor, end of the corridor. The light's always on late, but the professor never remembers staying.",
-    x: 32,
-    y: 49,
-    tier: "minor",
   },
   {
     id: "hotel-miskatonic",
