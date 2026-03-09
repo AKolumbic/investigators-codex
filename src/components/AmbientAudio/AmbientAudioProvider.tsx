@@ -80,8 +80,8 @@ export function AmbientAudioProvider({ children }: { children: ReactNode }) {
       // Apply current volumes before first play
       if (jazzRef.current) jazzRef.current.volume = jazzMuted ? 0 : jazzVolume;
       if (rainRef.current) rainRef.current.volume = rainMuted ? 0 : rainVolume;
-      jazzRef.current?.play();
-      rainRef.current?.play();
+      jazzRef.current?.play().catch(() => {});
+      rainRef.current?.play().catch(() => {});
       setIsPlaying(true);
     }
   }, [isPlaying, ensureAudio, jazzVolume, rainVolume, jazzMuted, rainMuted]);

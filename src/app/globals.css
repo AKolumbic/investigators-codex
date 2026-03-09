@@ -114,9 +114,8 @@ body {
 .ambient-slider {
   -webkit-appearance: none;
   appearance: none;
-  height: 3px;
-  background: var(--color-gold-dark);
-  border-radius: 2px;
+  height: 20px;
+  background: transparent;
   outline: none;
   opacity: 0.7;
   transition: opacity 0.2s;
@@ -124,6 +123,11 @@ body {
 }
 .ambient-slider:hover {
   opacity: 1;
+}
+.ambient-slider::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--color-gold-dark);
+  border-radius: 2px;
 }
 .ambient-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -134,6 +138,13 @@ body {
   background: var(--color-gold);
   border: 1px solid var(--color-gold-dark);
   cursor: pointer;
+  margin-top: -4.5px;
+}
+.ambient-slider::-moz-range-track {
+  height: 3px;
+  background: var(--color-gold-dark);
+  border-radius: 2px;
+  border: none;
 }
 .ambient-slider::-moz-range-thumb {
   width: 12px;
