@@ -95,8 +95,8 @@ export function AmbientAudioWidget() {
           flex h-11 w-11 items-center justify-center
           rounded-full border
           ${isPlaying
-            ? "border-gold/60 bg-gold/15 text-gold shadow-[0_0_12px_rgba(212,168,48,0.25)]"
-            : "border-gold-dark/40 bg-noir-surface text-gold-dark hover:border-gold/50 hover:text-gold"
+            ? "border-gold/30 bg-gold/10 text-gold/50 opacity-40 hover:opacity-100 hover:border-gold/60 hover:bg-gold/15 hover:text-gold hover:shadow-[0_0_12px_rgba(212,168,48,0.25)]"
+            : "border-gold-dark/20 bg-noir-surface/80 text-gold-dark/40 opacity-30 hover:opacity-100 hover:border-gold/50 hover:text-gold"
           }
           transition-all duration-300 cursor-pointer
         `}

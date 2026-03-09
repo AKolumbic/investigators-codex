@@ -44,10 +44,9 @@ function parseChapterFile(filename: string, id: string): LiteraryChapter {
     const line = lines[i];
     const trimmed = line.trim();
 
-    // Title line (first line): "MADNESS ON THE MISKATONIC" or "CHAPTER TWO — THE BODY"
-    if (i === 0 && (trimmed.startsWith("MADNESS") || trimmed.startsWith("CHAPTER"))) {
-      // Parse "CHAPTER TWO — THE BODY" or just "MADNESS ON THE MISKATONIC"
-      if (trimmed.startsWith("CHAPTER")) {
+    // Title line (first line): "MADNESS ON THE MISKATONIC", "CHAPTER TWO — THE BODY", "PROLOGUE — INTO ARKHAM"
+    if (i === 0 && (trimmed.startsWith("MADNESS") || trimmed.startsWith("CHAPTER") || trimmed.startsWith("PROLOGUE"))) {
+      if (trimmed.startsWith("CHAPTER") || trimmed.startsWith("PROLOGUE")) {
         const dashIdx = trimmed.indexOf("\u2014");
         if (dashIdx !== -1) {
           chapterTitle = trimmed.slice(0, dashIdx).trim();
@@ -68,7 +67,7 @@ function parseChapterFile(filename: string, id: string): LiteraryChapter {
     }
 
     // Chapter line (if title was on line 0 as "MADNESS..."): "CHAPTER ONE — THE GATHERING"
-    if (trimmed.startsWith("CHAPTER") && i > 0) {
+    if ((trimmed.startsWith("CHAPTER") || trimmed.startsWith("PROLOGUE")) && i > 0) {
       const dashIdx = trimmed.indexOf("\u2014");
       if (dashIdx !== -1) {
         chapterTitle = trimmed.slice(0, dashIdx).trim();
@@ -129,18 +128,29 @@ function parseChapterFile(filename: string, id: string): LiteraryChapter {
     }
 
     // Regular text — accumulate into paragraph
-    if (currentSection) {
-      if (pendingParagraph) {
-        pendingParagraph += " " + trimmed;
-      } else {
-        pendingParagraph = trimmed;
-      }
+    if (!currentSection) {
+      // Preamble text before any section marker — create implicit section
+      currentSection = { number: "", title: "", blocks: [] };
+      sections.push(currentSection);
+    }
+    if (pendingParagraph) {
+      pendingParagraph += " " + trimmed;
+    } else {
+      pendingParagraph = trimmed;
     }
   }
 
   flushParagraph();
 
   return { id, chapterTitle, subtitle, sections };
+}
+
+function deriveId(filename: string): string {
+  const name = filename.replace(/\.txt$/, "");
+  // Strip leading number prefix: "00-prologue" → "prologue"
+  const stripped = name.replace(/^\d+-/, "");
+  // Insert hyphen between letters and digits: "chapter1" → "chapter-1"
+  return stripped.replace(/([a-z])(\d)/, "$1-$2");
 }
 
 export function getAllChapters(): LiteraryChapter[] {
@@ -150,7 +160,7 @@ export function getAllChapters(): LiteraryChapter[] {
     .filter((f) => f.endsWith(".txt"))
     .sort();
 
-  return files.map((f, i) => parseChapterFile(f, `chapter-${i + 1}`));
+  return files.map((f) => parseChapterFile(f, deriveId(f)));
 }
 
 export function getChapterById(id: string): LiteraryChapter | undefined {

@@ -6,7 +6,6 @@ import {
   useState,
   useRef,
   useCallback,
-  useEffect,
   type ReactNode,
 } from "react";
 
@@ -78,23 +77,41 @@ export function AmbientAudioProvider({ children }: { children: ReactNode }) {
       rainRef.current?.pause();
       setIsPlaying(false);
     } else {
+      // Apply current volumes before first play
+      if (jazzRef.current) jazzRef.current.volume = jazzMuted ? 0 : jazzVolume;
+      if (rainRef.current) rainRef.current.volume = rainMuted ? 0 : rainVolume;
       jazzRef.current?.play();
       rainRef.current?.play();
       setIsPlaying(true);
     }
-  }, [isPlaying, ensureAudio]);
+  }, [isPlaying, ensureAudio, jazzVolume, rainVolume, jazzMuted, rainMuted]);
 
-  useEffect(() => {
-    if (jazzRef.current) {
-      jazzRef.current.volume = jazzMuted ? 0 : jazzVolume;
-    }
-  }, [jazzVolume, jazzMuted]);
+  // Apply volume directly to audio elements (no useEffect timing gap)
+  const setJazzVolume = useCallback((v: number) => {
+    setJazzVolumeState(v);
+    if (jazzRef.current) jazzRef.current.volume = jazzMuted ? 0 : v;
+  }, [jazzMuted]);
 
-  useEffect(() => {
-    if (rainRef.current) {
-      rainRef.current.volume = rainMuted ? 0 : rainVolume;
-    }
-  }, [rainVolume, rainMuted]);
+  const setRainVolume = useCallback((v: number) => {
+    setRainVolumeState(v);
+    if (rainRef.current) rainRef.current.volume = rainMuted ? 0 : v;
+  }, [rainMuted]);
+
+  const toggleJazzMute = useCallback(() => {
+    setJazzMuted((prev) => {
+      const next = !prev;
+      if (jazzRef.current) jazzRef.current.volume = next ? 0 : jazzVolume;
+      return next;
+    });
+  }, [jazzVolume]);
+
+  const toggleRainMute = useCallback(() => {
+    setRainMuted((prev) => {
+      const next = !prev;
+      if (rainRef.current) rainRef.current.volume = next ? 0 : rainVolume;
+      return next;
+    });
+  }, [rainVolume]);
 
   return (
     <AmbientAudioContext.Provider
@@ -105,10 +122,10 @@ export function AmbientAudioProvider({ children }: { children: ReactNode }) {
         jazzMuted,
         rainMuted,
         togglePlay,
-        setJazzVolume: setJazzVolumeState,
-        setRainVolume: setRainVolumeState,
-        toggleJazzMute: () => setJazzMuted((m) => !m),
-        toggleRainMute: () => setRainMuted((m) => !m),
+        setJazzVolume,
+        setRainVolume,
+        toggleJazzMute,
+        toggleRainMute,
       }}
     >
       {children}

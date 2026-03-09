@@ -75,9 +75,11 @@ export default async function ChapterPage({
         {chapter.sections.map((section, si) => (
           <section key={si} className={si > 0 ? "mt-14" : ""}>
             {/* Section number */}
-            <div className="mb-1 text-center font-[family-name:var(--font-crimson)] text-lg tracking-[3px] text-cream/50">
-              {section.number}.
-            </div>
+            {section.number && (
+              <div className="mb-1 text-center font-[family-name:var(--font-crimson)] text-lg tracking-[3px] text-cream/50">
+                {section.number}.
+              </div>
+            )}
             {/* Section title */}
             {section.title && (
               <div className="mb-8 text-center">
