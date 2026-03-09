@@ -61,6 +61,56 @@ export const clues: Record<string, Clue> = {
     source: "Session 1 — Vic's Letter",
     text: "Vic's letter was urgent. Something in Arkham needed help. The others seem to know more — for now, watch and listen.",
   },
+
+  // ── Session 2 ──────────────────────────────────────────
+
+  // Sean
+  "sean-hotel-mob": {
+    id: "sean-hotel-mob",
+    source: "Session 2 — Hotel Miskatonic",
+    text: "The Hotel Miskatonic is an Irish mob operation. Enforcers at both entrances, and the boss — whoever he is — watches from the penthouse. Vic was staying in a gangster's building. The room is still locked.",
+  },
+  "sean-hotel-pistolwhip": {
+    id: "sean-hotel-pistolwhip",
+    source: "Session 2 — Hotel Miskatonic",
+    text: "Got inside by pistol-whipping the back door guard. Couldn't break down Vic's door — shoulder's wrecked. Got out clean, but the mob will find their man. They'll put the pieces together eventually.",
+  },
+
+  // Nell
+  "nell-fabric-scrap": {
+    id: "nell-fabric-scrap",
+    source: "Session 2 — The Riverbank",
+    text: "A scrap of dark wool fabric found snagged near the bridge where Vic's body was recovered. Heavy weave, consistent with a man's overcoat. Torn in haste.",
+  },
+  "nell-pike-lied": {
+    id: "nell-pike-lied",
+    source: "Session 2 — The Morgue",
+    text: "Coroner Pike claimed Vic had been in the water for weeks and died from blunt force trauma. Both lies. His eyes had burst and his face was burned. Pike is either paid off or frightened into silence.",
+  },
+
+  // Bill
+  "bill-drag-marks": {
+    id: "bill-drag-marks",
+    source: "Session 2 — The Riverbank",
+    text: "Drag marks in the mud beneath the bridge led TO the water, not from it. Someone dragged a body to the river's edge and dumped it in. Vic didn't drown. He was disposed of.",
+  },
+  "bill-arrested": {
+    id: "bill-arrested",
+    source: "Session 2 — The Morgue",
+    text: "Punched a cop at the coroner's office after Pike's lies fell apart. Got shot — grazed — and arrested. Currently in Arkham lockup.",
+  },
+
+  // Mikel
+  "mikel-cause-of-death": {
+    id: "mikel-cause-of-death",
+    source: "Session 2 — The Morgue",
+    text: "Examined Vic's body. The face was destroyed — eyes burst, skin burned — but the body beneath was intact. No broken bones, no crushing injuries. He died of shock. The pain of whatever happened to his face killed him.",
+  },
+  "mikel-steven-white": {
+    id: "mikel-steven-white",
+    source: "Session 2 — The Riverbank",
+    text: "A dockworker named Steven White found the body. Police took him away for questioning. He may know more about when and where Vic surfaced.",
+  },
 };
 
 /** Look up full Clue objects for a list of IDs. Unknown IDs are silently skipped. */

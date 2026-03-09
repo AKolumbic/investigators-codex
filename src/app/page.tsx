@@ -71,6 +71,20 @@ export default function Home() {
           </span>
         </Link>
       )}
+
+      {/* Literary Account link */}
+      <Link
+        href="/read"
+        className="group mt-4 block rounded-sm border border-gold-dark/40 bg-noir-surface px-4 py-3 text-center transition-all duration-300 hover:border-gold/60 hover:shadow-[0_0_20px_rgba(212,168,48,0.15)] sm:mt-5"
+      >
+        <span className="font-[family-name:var(--font-cinzel)] text-sm tracking-wide text-gold">
+          A Literary Account
+        </span>
+        <br />
+        <span className="font-[family-name:var(--font-crimson)] text-xs italic text-muted">
+          The story so far
+        </span>
+      </Link>
     </main>
   );
 }

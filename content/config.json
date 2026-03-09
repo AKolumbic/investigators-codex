@@ -6,13 +6,13 @@
     "mikel": true
   },
   "clues": {
-    "bill": ["bill-porter-sighting", "bill-ashburn-lead"],
-    "nell": ["nell-scrapbook-pattern", "nell-fiske-flask", "nell-fairchild-genuine", "nell-ashburn-amateur"],
-    "sean": ["sean-sheamus-tip", "sean-vic-hotel"],
-    "mikel": ["mikel-vik-sos"]
+    "bill": ["bill-porter-sighting", "bill-ashburn-lead", "bill-drag-marks", "bill-arrested"],
+    "nell": ["nell-scrapbook-pattern", "nell-fiske-flask", "nell-fairchild-genuine", "nell-ashburn-amateur", "nell-fabric-scrap", "nell-pike-lied"],
+    "sean": ["sean-sheamus-tip", "sean-vic-hotel", "sean-hotel-mob", "sean-hotel-pistolwhip"],
+    "mikel": ["mikel-vik-sos", "mikel-cause-of-death", "mikel-steven-white"]
   },
   "recaps": {
-    "visible": ["session-1"]
+    "visible": ["session-1", "session-2"]
   },
   "map": {
     "enabled": true,
