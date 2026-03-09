@@ -71,8 +71,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "northside",
     description:
       "Where the Boston & Maine line ends and Arkham begins. Porters know everyone who arrives and most of what they carry.",
-    x: 40,
-    y: 32.6,
+    x: 42,
+    y: 33.6,
     tier: "major",
   },
   {
@@ -106,6 +106,17 @@ export const mapLocations: MapLocation[] = [
     tier: "minor",
   },
 
+  {
+    id: "sheamus-apartment",
+    name: "Sheamus Murphy's Apartment",
+    neighborhood: "northside",
+    description:
+      "A cluttered flat reeking of whiskey and taxidermy chemicals. The walls are papered with cryptid sightings and river maps.",
+    x: 36.8,
+    y: 16.8,
+    tier: "minor",
+  },
+
   // --- Merchant District ---
   {
     id: "the-docks",
@@ -113,7 +124,7 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "merchant",
     description:
       "Fish, diesel, and the faint sweetness of rum that fell off a boat. Half the cargo here has no paperwork.",
-    x: 44,
+    x: 49,
     y: 41.25,
     tier: "major",
   },
@@ -157,6 +168,16 @@ export const mapLocations: MapLocation[] = [
       "Justice is blind in Arkham, and lately she's been looking the other way on purpose.",
     x: 63,
     y: 22,
+    tier: "minor",
+  },
+  {
+    id: "coroners-office",
+    name: "County Coroner's Office",
+    neighborhood: "downtown",
+    description:
+      "Rutherford Pike works late and asks few questions. The drawers are fuller than usual this spring.",
+    x: 55,
+    y: 27.8,
     tier: "minor",
   },
 
