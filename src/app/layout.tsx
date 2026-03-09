@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { cinzel, crimsonText, oswald, caveat, patrickHand, permanentMarker } from "@/lib/fonts";
+import { AmbientAudioProvider } from "@/components/AmbientAudio/AmbientAudioProvider";
+import { AmbientAudioWidget } from "@/components/AmbientAudio/AmbientAudioWidget";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,7 +31,10 @@ export default function RootLayout({
           antialiased
         `}
       >
-        {children}
+        <AmbientAudioProvider>
+          {children}
+          <AmbientAudioWidget />
+        </AmbientAudioProvider>
       </body>
     </html>
   );
