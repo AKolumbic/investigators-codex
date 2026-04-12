@@ -37,6 +37,21 @@ export const recaps: Record<string, SessionRecap> = {
       "The session ended with Bill in an Arkham jail cell, the remaining investigators standing in the rain outside the municipal building, and more questions than answers.",
     ],
   },
+  "session-3": {
+    id: "session-3",
+    title: "Session 3 \u2014 The New Man",
+    date: "May 5, 1930",
+    summary:
+      "Bill vanished into county lockup. Aiden Chez arrived in his place, and the Ashburn trail deepened just as the first solid whispers of the King in Shadow surfaced.",
+    events: [
+      "Nell Carroway went to the Gilded Swan alone and spoke with June St. Clair. June confirmed the cursed liquor is real, separate from O'Bannion's supply, and tied by rumor to a figure nobody can identify by face: the King in Shadow.",
+      "June also confirmed that Vic Valentine had been at the Gilded Swan about a week before his death, asking the same questions Nell was asking now. He was on the right trail before he was killed.",
+      "With Bill's arrest holding, a new investigator entered the case. Aiden Chez, a private investigator from San Francisco, came to Arkham after Vic contacted him by reputation and met Sean Murphy and Mikel Itsaso at Miskatonic University.",
+      "The investigators followed the Ashburn lead to Harriet Stockbridge, a local historian preparing a lecture on the Ashburn family. Harriet confirmed the family has a genuine occult history stretching back centuries — but said Elbridge Ashburn III is only playing at powers his ancestors understood better.",
+      "Harriet also revealed that someone had come to her door and pressured her to cancel the talk, proof that the Ashburn history still makes someone in Arkham nervous.",
+      "The session ended with the investigators heading to Dr. Henry Armitage at the Orne Library, hoping the restricted collection might tell them whether Ashburn's theatrics point to something real or only to something worse hiding behind them.",
+    ],
+  },
 };
 
 export function getRecapById(id: string): SessionRecap | undefined {

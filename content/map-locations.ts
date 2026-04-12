@@ -29,18 +29,28 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "campus",
     description:
       "The ivy-choked heart of Arkham's intellectual life. Half the faculty drink too much and the other half have seen too much.",
-    x: 37,
-    y: 52,
+    x: 40.5,
+    y: 51,
     tier: "major",
   },
   {
-    id: "orne-library",
+    id: "warren-hall",
     name: "Warren Hall",
     neighborhood: "campus",
     description:
       "Home of the Department of Psychology. Room 214 belongs to Professor Fairchild — the light's always on late, but the professor never remembers staying.",
     x: 36.5,
     y: 49,
+    tier: "major",
+  },
+  {
+    id: "orne-library",
+    name: "Orne Library",
+    neighborhood: "campus",
+    description:
+      "A cathedral of stacks, dust, and academic nerves. Armitage keeps the restricted collection under lock and a closer eye than he admits.",
+    x: 46.2,
+    y: 52.8,
     tier: "major",
   },
   {

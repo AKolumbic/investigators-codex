@@ -1,23 +1,29 @@
 {
+  "investigators": {
+    "visible": ["nell", "sean", "mikel", "aiden"]
+  },
   "letters": {
+    "aiden": true,
     "bill": true,
     "nell": true,
     "sean": true,
     "mikel": true
   },
   "clues": {
+    "aiden": ["harriet-ashburn-lineage", "harriet-threat", "june-vic-gilded-swan"],
     "bill": ["bill-porter-sighting", "bill-ashburn-lead", "bill-drag-marks", "bill-arrested"],
-    "nell": ["nell-scrapbook-pattern", "nell-fiske-flask", "nell-fairchild-genuine", "nell-ashburn-amateur", "nell-fabric-scrap", "nell-pike-lied"],
-    "sean": ["sean-sheamus-tip", "sean-vic-hotel", "sean-hotel-mob", "sean-hotel-pistolwhip"],
-    "mikel": ["mikel-vik-sos", "mikel-cause-of-death", "mikel-steven-white"]
+    "nell": ["nell-scrapbook-pattern", "nell-fiske-flask", "nell-fairchild-genuine", "nell-ashburn-amateur", "nell-fabric-scrap", "nell-pike-lied", "june-special-stock", "june-king-in-shadow", "june-vic-gilded-swan"],
+    "sean": ["sean-sheamus-tip", "sean-vic-hotel", "sean-hotel-mob", "sean-hotel-pistolwhip", "harriet-ashburn-lineage"],
+    "mikel": ["mikel-vik-sos", "mikel-cause-of-death", "mikel-steven-white", "harriet-ashburn-lineage"]
   },
   "recaps": {
-    "visible": ["session-1", "session-2"]
+    "visible": ["session-1", "session-2", "session-3"]
   },
   "map": {
     "enabled": true,
     "visibleLocations": [
       "miskatonic-university",
+      "warren-hall",
       "bm-train-station",
       "arkham-gazette",
       "the-docks",
@@ -26,6 +32,7 @@
       "coroners-office",
       "sheamus-apartment",
       "the-speakeasy",
+      "gilded-swan",
       "ashburn-estate"
     ]
   }

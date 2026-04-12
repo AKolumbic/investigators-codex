@@ -9,6 +9,18 @@ export interface LetterContent {
 }
 
 export const letters: Record<InvestigatorSlug, LetterContent> = {
+  aiden: {
+    greeting: "Mr. Chez —",
+    paragraphs: [
+      "A Boston colleague tells me you're the sort of man people underestimate until they've already said too much.",
+      "I'm in Arkham on a university matter that has gone well past ordinary legwork. Moneyed people are involved. So are frightened people. Both kinds lie, and I need someone who can tell the difference without making a show of it.",
+      "I can't put the particulars on paper. If this sounds vague, assume that's because the paper isn't safe.",
+      "Come to Arkham and ask for me at Miskatonic University. If I am not there, start with Professor Gordon Fairchild in the psychology department. He knows enough to point you in the right direction.",
+      "Discretion matters. So does speed.",
+    ],
+    closing: "Regards,",
+    signature: "Vic Valentine",
+  },
   bill: {
     greeting: "Bill,",
     paragraphs: [

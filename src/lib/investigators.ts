@@ -1,4 +1,4 @@
-export type InvestigatorSlug = "bill" | "nell" | "sean" | "mikel";
+export type InvestigatorSlug = "aiden" | "bill" | "nell" | "sean" | "mikel";
 
 export type LetterStyle = "paper" | "scrap";
 
@@ -13,6 +13,15 @@ export interface Investigator {
 }
 
 export const investigators: Record<InvestigatorSlug, Investigator> = {
+  aiden: {
+    slug: "aiden",
+    name: "Aiden",
+    fullName: "Aiden Chez",
+    occupation: "Private Investigator",
+    portrait: "/portraits/aiden.png",
+    letterStyle: "paper",
+    tagline: "Read the room.",
+  },
   bill: {
     slug: "bill",
     name: "Bill",

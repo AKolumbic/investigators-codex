@@ -13,6 +13,29 @@ export interface CharacterLore {
 }
 
 export const lore: Record<InvestigatorSlug, CharacterLore> = {
+  aiden: {
+    whoYouAre: [
+      "You were born in Paris and made your living in San Francisco, which means you've spent most of your life learning how to read a room before the room decides what to do with you. A private investigator survives on that skill. Not fists. Not threats. A look held a beat too long, the wrong smile at the wrong name, the way a liar reaches for his cuff before his alibi. That's the trade.",
+      "You've built a reputation for discretion, charm, and patience. Men with money hire you because you put them at ease. Men without money hire you because you listen. Either way, the work is the same: find the lie, then find the reason for it.",
+      "Vic Valentine wrote because he needed exactly that. Not muscle. Not noise. He needed someone who could walk into a strange town, shake the right hands, and notice who flinched. So you came east by rail with one name in your pocket — Gordon Fairchild — and the clear sense that Vic would not have sent for you unless the floor was already giving way under him.",
+    ],
+    whatYouKnow: [
+      "Vic Valentine asked for discreet help in Arkham.",
+      "The case centers on Miskatonic University and a professor named Gordon Fairchild.",
+      "Vic kept the details off paper, which means he expected interference.",
+      "You arrived from San Francisco to a town already whispering about a dead detective.",
+      "You do your best work when everyone else thinks they're still in control of the conversation.",
+    ],
+    people: [
+      {
+        name: "Vic Valentine",
+        description:
+          "A Boston private investigator who hired you by reputation. You haven't worked together before, but he knew what you were good at and wrote like a man who had run out of time.",
+      },
+    ],
+    belongings:
+      "A neat valise, a well-cut coat, clean collars, a fountain pen, a notebook that closes flat in one hand, twenty-four dollars in folding cash, and Vic's letter tucked inside the inner breast pocket where it stays dry.",
+  },
   bill: {
     whoYouAre: [
       "You fought in the Argonne. You came home and the world had moved on without you. The ranch work dried up when the money did. You drifted south, punched cattle, broke horses, slept in bunkhouses that smelled like sweat and kerosene. You're twenty-nine years old, you've got nine dollars to your name, and you're a thousand miles from anywhere that makes sense to you.",

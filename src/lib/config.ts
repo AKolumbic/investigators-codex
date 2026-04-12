@@ -1,5 +1,5 @@
 import configData from "../../content/config.json";
-import type { InvestigatorSlug } from "./investigators";
+import { investigatorSlugs, type InvestigatorSlug } from "./investigators";
 
 interface MapConfig {
   enabled: boolean;
@@ -10,7 +10,12 @@ interface RecapConfig {
   visible: string[];
 }
 
+interface InvestigatorConfig {
+  visible: InvestigatorSlug[];
+}
+
 interface Config {
+  investigators?: InvestigatorConfig;
   letters: Record<InvestigatorSlug, boolean>;
   clues: Record<InvestigatorSlug, string[]>;
   recaps: RecapConfig;
@@ -25,6 +30,10 @@ export function isLetterVisible(slug: InvestigatorSlug): boolean {
 
 export function getVisibleClues(slug: InvestigatorSlug): string[] {
   return config.clues[slug] ?? [];
+}
+
+export function getVisibleInvestigatorSlugs(): InvestigatorSlug[] {
+  return config.investigators?.visible ?? investigatorSlugs;
 }
 
 export function isMapEnabled(): boolean {

@@ -1,12 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { investigators, investigatorSlugs } from "@/lib/investigators";
-import { isMapEnabled, getVisibleRecapIds } from "@/lib/config";
+import { investigators } from "@/lib/investigators";
+import {
+  getVisibleInvestigatorSlugs,
+  getVisibleRecapIds,
+  isMapEnabled,
+} from "@/lib/config";
 import { CharacterCard } from "@/components/CharacterCard";
 
 export default function Home() {
   const mapEnabled = isMapEnabled();
   const recapsVisible = getVisibleRecapIds().length > 0;
+  const visibleInvestigators = getVisibleInvestigatorSlugs();
 
   return (
     <main className="mx-auto min-h-dvh max-w-lg px-4 py-8 sm:py-12">
@@ -35,7 +40,7 @@ export default function Home() {
 
       {/* Character grid — 2x2 on mobile, stays 2x2 */}
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
-        {investigatorSlugs.map((slug) => (
+        {visibleInvestigators.map((slug) => (
           <CharacterCard key={slug} investigator={investigators[slug]} />
         ))}
       </div>

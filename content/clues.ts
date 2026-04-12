@@ -1,5 +1,3 @@
-import type { InvestigatorSlug } from "@/lib/investigators";
-
 export interface Clue {
   id: string;
   source: string;
@@ -110,6 +108,34 @@ export const clues: Record<string, Clue> = {
     id: "mikel-steven-white",
     source: "Session 2 — The Riverbank",
     text: "A dockworker named Steven White found the body. Police took him away for questioning. He may know more about when and where Vic surfaced.",
+  },
+
+  // ── Session 3 ──────────────────────────────────────────
+
+  "june-special-stock": {
+    id: "june-special-stock",
+    source: "Session 3 — The Gilded Swan",
+    text: "June St. Clair confirmed the special stock is real: cursed liquor, separate from O'Bannion's supply, and bad enough that even hardened drinkers are starting to whisper about it.",
+  },
+  "june-king-in-shadow": {
+    id: "june-king-in-shadow",
+    source: "Session 3 — The Gilded Swan",
+    text: "First time the name surfaced plainly: The King in Shadow. Street talk gives him ownership of the cursed liquor, but nobody seems able to put a face to him.",
+  },
+  "june-vic-gilded-swan": {
+    id: "june-vic-gilded-swan",
+    source: "Session 3 — The Gilded Swan",
+    text: "Vic was here about a week before his death, asking the same questions about the special stock and the King in Shadow. He was on this trail before someone shut him up.",
+  },
+  "harriet-ashburn-lineage": {
+    id: "harriet-ashburn-lineage",
+    source: "Session 3 — Harriet Stockbridge",
+    text: "Harriet Stockbridge says the Ashburns' real occult history stretches back centuries — but Elbridge Ashburn III is a pale imitation, a fool in inherited robes. Dangerous, yes. Competent, no.",
+  },
+  "harriet-threat": {
+    id: "harriet-threat",
+    source: "Session 3 — Harriet Stockbridge",
+    text: "Harriet was threatened two days before her lecture. Somebody wants the Ashburn history buried badly enough to lean on an old woman in her own home.",
   },
 };
 

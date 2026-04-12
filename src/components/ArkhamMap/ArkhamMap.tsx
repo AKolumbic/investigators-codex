@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, type MouseEvent } from "react";
 import {
   TransformWrapper,
   TransformComponent,
@@ -33,10 +33,25 @@ export function ArkhamMap({ locations }: { locations: MapLocation[] }) {
     if (activeLocation) closePopup();
   }, [activeLocation, closePopup]);
 
+  const handleDoubleClickCapture = useCallback(
+    (e: MouseEvent<HTMLDivElement>) => {
+      if (
+        typeof window !== "undefined" &&
+        window.matchMedia("(any-pointer: fine)").matches
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    },
+    []
+  );
+
   return (
     <div
       className="relative h-full w-full overflow-hidden bg-noir-bg"
       onClick={handleBackgroundClick}
+      onContextMenu={(e) => e.preventDefault()}
+      onDoubleClickCapture={handleDoubleClickCapture}
     >
       <TransformWrapper
         initialScale={0.5}
@@ -44,6 +59,11 @@ export function ArkhamMap({ locations }: { locations: MapLocation[] }) {
         maxScale={4}
         centerOnInit
         wheel={{ step: 0.08 }}
+        panning={{
+          allowLeftClickPan: false,
+          allowRightClickPan: true,
+          excluded: ["button"],
+        }}
         pinch={{ step: 5 }}
         onPanningStart={() => {
           if (activeLocation) closePopup();
