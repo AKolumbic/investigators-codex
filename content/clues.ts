@@ -115,17 +115,7 @@ export const clues: Record<string, Clue> = {
   "june-special-stock": {
     id: "june-special-stock",
     source: "Session 3 — The Gilded Swan",
-    text: "June St. Clair confirmed the special stock is real: cursed liquor, separate from O'Bannion's supply, and bad enough that even hardened drinkers are starting to whisper about it.",
-  },
-  "june-king-in-shadow": {
-    id: "june-king-in-shadow",
-    source: "Session 3 — The Gilded Swan",
-    text: "First time the name surfaced plainly: The King in Shadow. Street talk gives him ownership of the cursed liquor, but nobody seems able to put a face to him.",
-  },
-  "june-vic-gilded-swan": {
-    id: "june-vic-gilded-swan",
-    source: "Session 3 — The Gilded Swan",
-    text: "Vic was here about a week before his death, asking the same questions about the special stock and the King in Shadow. He was on this trail before someone shut him up.",
+    text: "June St. Clair confirmed the special stock is real: cursed liquor moving through the cheaper joints near the docks, separate from O'Bannion's supply. It doesn't just get people drunk. It changes them.",
   },
   "harriet-ashburn-lineage": {
     id: "harriet-ashburn-lineage",
