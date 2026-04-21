@@ -17,7 +17,7 @@
     "mikel": ["mikel-vik-sos", "mikel-cause-of-death", "mikel-steven-white", "harriet-ashburn-lineage"]
   },
   "recaps": {
-    "visible": ["session-1", "session-2", "session-3"]
+    "visible": ["session-1", "session-2", "session-3", "session-4", "session-5"]
   },
   "map": {
     "enabled": true,
@@ -33,7 +33,8 @@
       "sheamus-apartment",
       "the-speakeasy",
       "gilded-swan",
-      "ashburn-estate"
+      "ashburn-estate",
+      "st-marys-graveyard"
     ]
   }
 }
