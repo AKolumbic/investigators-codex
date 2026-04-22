@@ -111,8 +111,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "northside",
     description:
       "Arkham's worst-kept secret: a jazz club behind a hat shop. The singer knows more than she lets on.",
-    x: 40,
-    y: 19,
+    x: 57.75,
+    y: 42.5,
     tier: "minor",
   },
 
@@ -134,8 +134,8 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "merchant",
     description:
       "Fish, diesel, and the faint sweetness of rum that fell off a boat. Half the cargo here has no paperwork. A dockworker pulled a body from the river here — face burned beyond recognition.",
-    x: 49,
-    y: 41.25,
+    x: 41.8,
+    y: 41,
     tier: "major",
   },
   {
@@ -242,12 +242,12 @@ export const mapLocations: MapLocation[] = [
     neighborhood: "southside",
     description:
       "The caretaker patrols with a shotgun now. Says it's for coyotes. Her hands shake when she says it.",
-    x: 37,
-    y: 73,
+    x: 63.4,
+    y: 78.75,
     tier: "minor",
   },
 ];
 
 export const mapLocationsById = Object.fromEntries(
-  mapLocations.map((loc) => [loc.id, loc])
+  mapLocations.map((loc) => [loc.id, loc]),
 ) as Record<string, MapLocation>;
